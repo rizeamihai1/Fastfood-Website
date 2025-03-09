@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title> Restaurant </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="login.html" target="_self">Login</a>
+        <div class = "nav-items">
+            <a href="home.html" target="_self"> Home</a>
+            <a href="about.html" target="_self"> Despre</a>
+            <a href="contact.html" target="_self"> Contact</a>
+        </div>
+        <div class = "order"> <a href="https://glovoapp.com" target="_self">Comanda acum</a></div>
+
+    </nav>
+    </header>
+    <main id = "content" class = "side-down">
+      <div class="login">
+        <form id = "login-form">
+          <input
+              type = "text"
+              id = "username"
+              placeholder = "Nume de utilizator"
+              required
+          />
+          <input type ="password" id = "password" placeholder = "Parola" required />
+          <button type="submit">Login</button>
+      </form>
+      <script src="login.js"></script>
+        
+        
+      </div>
+    </main>
+    <footer>
+      <section class="contact">
+        <h2 class="section-title">Cum ne puteti gasii?</h2>
+        <ul class="profile-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_self" class="buton_1_link"> Pagina de Facebook </a>
+          </li>
+          <li>
+            <a href="https://www.glovoapp.com/" target="_self" class="buton_2_link"> Glovo </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_self" class="buton_3_link"> Instagram </a>
+          </li>
+          <li>
+            <a href="mailto:ceva_mail@gmail.com" target="_self" class="buton_4_link">
+              Trimite un email
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    background: linear-gradient(to right, #49494b, #3b3b3d);
+}
+
+nav {
+    height: 50px;
+    background: #fdcc04;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+}
+.order button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fdcc04;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+nav a {
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+}
+nav a:hover {
+    text-decoration: none;
+}
+nav a:active {
+    text-decoration:none;
+}
+nav a:link {
+    text-decoration: none;
+}
+nav a:visited {
+    text-decoration: none;
+}
+/* General styles */
+.page-container {
+    width: 780px;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+section .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+/* Header styles */
+header {
+    background-image: url('./images/hero-bg.jpg');
+    height: 550px;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* Profile styles */
+.profile {
+    text-align: center;
+    margin-top: -75px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border: solid 4px #fff;
+    border-radius: 50%;
+    display: inline-block;
+    rotate: 0;
+}
+
+.profile-image img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.profile-details {
+    font-size: 1rem;
+    margin: 24px 0;
+}
+
+.profile-details p {
+    flex-grow: 1;
+}
+.imagine_about img {
+    width: 200px; /* Adjust image width as needed */
+    margin-right: 20px;
+}
+
+.profile-details h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+
+/* Project styles */
+.produs {
+    font-size: 1rem;
+    background-color: #fdcb04ce;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.login {
+    text-align: center;
+    font-size: 1.5 rem;
+    width: 100%;
+    padding: 12px 20px;
+    size: 10px;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login input {
+    width: 20%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+.login button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fdcc04;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.produs img {
+    max-width: 100%;
+}
+
+.produs .produs-title {
+    padding: 16px;
+}
+
+.produs-details {
+    display: none;
+    background-color: #fdcb04ce;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+}
+
+.produs-details .btn-outline {
+    text-align: center;
+    text-decoration: none;
+    color:#fff;
+    padding: 8px;
+    border: solid 2px #fff;
+    border-radius: 5px;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+.produs-details .btn-outline:hover {
+    color: #fdcc04;
+    background-color: #fff;
+}
+
+.produs:hover .produs-details {
+    display: block;
+}
+
+/* Profile links style */
+.profile-links {
+    list-style: none;
+}
+
+.profile-links li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3d64a6;
+    padding: 16px;
+    display: block;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+.profile-links li a.buton_1_link {
+    background-color: #0067ff;
+}
+
+.profile-links li a.buton_2_link {
+    background-color: #ffc244;
+}
+
+.profile-links li a.buton_3_link {
+    background: linear-gradient(to right, #901dfe, #fea409);
+}
+
+.profile-links li a.buton_4_link {
+    background: linear-gradient(to right, #4387f8,#35ab55)
+}
+
+
+
+/* Footer style */
+footer {
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px 0;
+    width: 780px;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+/* Media Query */
+@media screen and (min-width: 780px) {
+
+    .produse {
+        overflow: hidden;
+    }
+
+    .produs {
+        width: 48%;
+    }
+    
+    .produs:nth-child(2n+1) {
+        float: right;
+        margin-left: 4%;
+    }
+   
+}
+
+.formular-contact {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/*animatia*/
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#content {
+    opacity: 0; /* Inițial, elementul este invizibil */
+    animation: slideDown 1.5s ease forwards; /* Animatia slideDown cu durata de 1 secunda */
+}
+
+
+/* Add these styles to your style.css */
+
+.cart-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #cart-button:hover, #cart-button:focus {
+    background-color: #3e8e41;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0f88eb;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+  }
+  
+  .dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown-content li {
+    padding: 12px 16px;
+    text-align: left;
+  }
+  
+  .dropdown-content li:hover {
+    background-color: #f90f0f;
+  }
+  
+  .cart-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  #clear-cart {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #clear-cart:hover {
+    background-color: #c9302c;
+  }
+
+  .add-to-cart {
+    background-color: #0f88eb; /* culoare de fundal */
+    border: none; /* eliminăm granițele */
+    color: white; /* culoare text */
+    padding: 15px 32px; /* spațiere între conținut și margine */
+    text-align: center; /* aliniere text */
+    text-decoration: none; /* eliminăm sublinierea */
+    display: inline-block; /* element de tip bloc */
+    font-size: 16px; /* dimensiune text */
+    margin: 4px 2px; /* margine între butoane */
+    cursor: pointer; /* cursor */
+    border-radius: 4px; /* colțuri rotunjite */
+}
+
+#butoanele {
+    display: flex;
+}

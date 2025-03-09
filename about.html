@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="style-about.css" >
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <script src="script.js"></script>
+    <title> Restaurant </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p> Bine ai venit, <span id="user-name"></span></p>
+        <script src="profile.js"></script>
+        <div class = "nav-items">
+          <a href="index.html" target="_self">Meniu</a>
+          <a href="home.html" target="_self"> Home</a>
+          <a href="about.html" target="_self"> Despre</a>
+          <a href="contact.html" target="_self"> Contact</a>
+      </div>
+        <div class = "order"> <button id="logout-button">Logout</button> </div>
+
+    </nav>
+    </header>
+    <main id = "content" class = "side-down">
+        <div class="page-container">
+            <section class="profile">
+              <div class="profile-image">
+                <img src="./images/logo.png" id="imagine" alt="logo" onclick="schimbaImagine()">
+              </div>
+              <div class="profile-details">
+                <div class="imagine_about"> 
+                  <img src="images/about-img.png" alt = "imagine about" width="200"> 
+                </div>
+                <p>
+                    Restaurantul nostru are o pasiune deosebită pentru fast food. 
+                    Ne place să servim mâncăruri delicioase, gata într-un timp scurt, 
+                    pentru a mulțumi clienții noștri în cel mai rapid mod posibil. 
+                    Suntem mereu în căutarea celor mai bune ingrediente și a celor mai 
+                    inovatoare rețete, pentru a aduce o experiență culinară de neuitat. 
+                    Fast food-ul nu trebuie să fie doar o opțiune rapidă și comodă, 
+                    ci și o alegere gustată și apreciată de toți cei care trec pragul restaurantului nostru.
+                </p>
+              </div>
+            </section> 
+          </div>
+    </main>
+    <footer>
+      <section class="contact">
+        <h2 class="section-title">Cum ne puteti gasii?</h2>
+        <ul class="profile-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_self" class="buton_1_link"> Pagina de Facebook </a>
+          </li>
+          <li>
+            <a href="https://www.glovoapp.com/" target="_self" class="buton_2_link"> Glovo </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_self" class="buton_3_link"> Instagram </a>
+          </li>
+          <li>
+            <a href="mailto:ceva_mail@gmail.com" target="_self" class="buton_4_link">
+              Trimite un email
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+
+  </body>
+</html>

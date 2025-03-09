@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-contact.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <script type="text/javascript" src="form.js"></script>
+    <title> Restaurant </title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p> Bine ai venit, <span id="user-name"></span></p>
+        <script src="profile.js"></script>
+        <div class = "nav-items">
+          <a href="index.html" target="_self">Meniu</a>
+          <a href="home.html" target="_self"> Home</a>
+          <a href="about.html" target="_self"> Despre</a>
+          <a href="contact.html" target="_self"> Contact</a>
+      </div>
+        <div class = "order"> <button id="logout-button">Logout</button> </div>
+
+    </nav>
+    </header>
+    <main id = "content" class = "side-down">
+        <div class="page-container">
+            <div class="contact-text">
+                <h1>Contact</h1>
+                <p>Pentru orice întrebări sau rezervări, nu ezitați să ne contactați. </p>
+                <p>Suntem aici pentru a vă ajuta și pentru a vă oferi o experiență culinară de neuitat.</p>    
+            </div>
+            
+
+            
+            <form target="_self" method="post" action = "">
+              <fieldset>
+                <legend>Trimiteti-ne un mesaj</legend>
+                  <div>
+                    <label for="nume">Nume:</label>
+                    <input 
+                      type = "text"
+                      id = "nume"
+                      required
+                      minlength="3"
+                      maxlength="20"
+                      size="20"
+                      />
+                  </div>
+    
+                  <div>
+                    <label for="prenume">Prenume:</label>
+                    <input 
+                      type = "text"
+                      id = "prenume"
+                      required
+                      minlength="3"
+                      maxlength="20"
+                      size="20"
+                      />
+                  </div>
+    
+                  <div>
+                    <label for="email">Email:</label>
+                    <input 
+                      type = "text"
+                      placeholder = "email@gmail.com"
+                      id = "email"
+                      required
+                      minlength="3"
+                      maxlength="36"
+                      size="36"
+                      />
+                  </div>
+                  
+                  <div>
+                    <label for="telefon">Telefon:</label>
+                    <input 
+                      type = "text"
+                      placeholder = "073-456-9192"
+                      id = "telefon"
+                      name = "telefon"
+                      pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                      required
+                      />
+                  </div>
+                  <label for="importanta">Importanta mesajului</label>
+                <input
+                  type="range"
+                  id="importanta"
+                  name="importanta"
+                  min="0%"
+                  max="100%"
+                  value="0%"
+                  step="20%"
+                  list="values"
+                  />
+                  <span> <output id="values"></output></span>
+                  <datalist id="values">
+                    <option value="0%" label="0%"></option>
+                    <option value="20%" label="20%"></option>
+                    <option value="40%" label="40%"></option>
+                    <option value="60%" label="60%"></option>
+                    <option value="80%" label="80%"></option>
+                    <option value="100%" label="100%"></option>
+                    
+                  </datalist>     
+                  <br>
+                  <button type="submit">Trimite</button>
+              </fieldset>
+            </form>
+            <div class="detalii-contact">
+              <h2>Informații de Contact</h2>
+              <p><strong>Adresă:</strong> Strada Exemplu Nr. XX, Oraș, Țară</p>
+              <p><strong>Telefon:</strong> +40 123 456 789</p>
+              <p><strong>Email:</strong> <a href="mailto:ceva_mail@gmail.com">ceva_mail@gmail.com</a></p>
+          </div>
+        </div>
+    </main>
+
+    <footer>
+      <section class="contact">
+        <h2 class="section-title">Cum ne puteti gasii?</h2>
+        <ul class="profile-links">
+          <li>
+            <a href="https://www.facebook.com/" target="_self" class="buton_1_link"> Pagina de Facebook </a>
+          </li>
+          <li>
+            <a href="https://www.glovoapp.com/" target="_self" class="buton_2_link"> Glovo </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_self" class="buton_3_link"> Instagram </a>
+          </li>
+          <li>
+            <a href="mailto:ceva_mail@gmail.com" target="_self" class="buton_4_link">
+              Trimite un email
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

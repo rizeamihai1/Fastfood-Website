@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <script defer src="script.js"></script>
+  <title>Restaurant</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <p>Bine ai venit, <span id="user-name"></span></p>
+      <div id="timer">Timp petrecut pe site: 0 minute</div>
+      <script src="profile.js"></script>
+      <div class="nav-items">
+        <a href="index.html" target="_self">Meniu</a>
+        <a href="home.html" target="_self">Home</a>
+        <a href="about.html" target="_self">Despre</a>
+        <a href="contact.html" target="_self">Contact</a>
+      </div>
+      <div class="order">
+        <button id="logout-button">Logout</button>
+        <div class="cart-dropdown">
+          <button id="cart-button">Coș de cumpărături</button>
+          <div id="cart-dropdown-content" class="dropdown-content">
+            <ul id="cart-items"></ul>
+            <button id="clear-cart">Golește coșul</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="content" class="side-down">
+    <div class="page-container">
+      <section class="profile">
+        <div class="profile-image">
+          <img src="./images/logo.png" id="imagine" alt="logo" onclick="schimbaImagine()">
+        </div>
+        <div class="profile-details">
+          <h1 id="paragrafu-meu">Restaurantul Nostru</h1>
+          <p>
+            Personalul nostru este bine pregătit și amabil, 
+            iar serviciul este rapid și eficient, pentru a satisface 
+            nevoile clienților noștri. În plus, restaurantul nostru pune 
+            accentul pe ingrediente proaspete și de calitate,
+            pentru a asigura gustul și satisfacția clienților noștri. 
+            Vă așteptăm cu drag să ne vizitați și să vă bucurați de o experiență fast food de neuitat!
+          </p>
+        </div>
+      </section>
+      <section class="produse">
+        <h2 class="section-title">Meniul nostru</h2>
+        <div class="produs-container">
+          <div class="produs">
+            <div class="produs-details">
+              <p>Carne de pui și de miel grill, felii de roșii și castraveți, varză, salată verde, 
+                sosuri cremoase și aromate, toate înfășurate într-un lipie proaspătă și pufos. 
+                O gustare delicioasă și rapidă pentru cei care doresc să savureze un preparat tradițional mediteranean.
+              </p>
+              <button class="add-to-cart" data-product="Shaorma mixtă">Adaugă în coș</button>
+            </div>
+            <img src="./images/f1.png" alt="poza shaorma">
+            <p class="produs-title">Shaorma mixtă</p>
+          </div>
+          <div class="produs">
+            <div class="produs-details">
+              <p>Pastele făinoase preparate în stil italian cu sos cremos de ouă, parmezan, bacon 
+                și usturoi, presărate cu piper negru proaspăt măcinat. O alegere savuroasă 
+                și sățioasă pentru iubitorii de paste.
+              </p>
+              <button class="add-to-cart" data-product="Paste Carbonara">Adaugă în coș</button>
+            </div>
+            <img src="./images/f2.png" alt="poza paste">
+            <p class="produs-title">Paste Carbonara</p>
+          </div>
+          <div class="produs">
+            <div class="produs-details">
+              <p>O pizza cu sos de roșii, mozzarella și ardei iute, presărată cu felii de salam picant, 
+                usturoi și busuioc proaspăt. O alegere potrivită pentru iubitorii de gusturi intense și picante.
+              </p>
+              <button class="add-to-cart" data-product="Pizza diavola">Adaugă în coș</button>
+            </div>
+            <img src="./images/f6.png" alt="poza pizza diavola">
+            <p class="produs-title">Pizza diavola</p>
+          </div>
+          <div class="produs">
+            <div class="produs-details">
+              <p>Cartofi tăiați subțire și prăjiți până devin crocanți și aurii, 
+                servit cu un sos de usturoi cremos și aromat. O garnitură delicioasă, potrivită pentru orice fel de mâncare.
+              </p>
+              <button class="add-to-cart" data-product="Cartofi prăjiți">Adaugă în coș</button>
+            </div>
+            <img src="./images/f5.png" alt="poza cartofi prăjiți">
+            <p class="produs-title">Cartofi prăjiți</p>
+          </div>
+          <div class="produs">
+            <div class="produs-details">
+              <p>Un burger cu carne de vită suculentă, servit într-un chiflă proaspătă cu felii de 
+                bacon crocant și brânză cheddar topită. O combinație perfectă între gustul salatelor și cel al cărnii.
+              </p>
+              <button class="add-to-cart" data-product="Burger cu bacon și cheddar">Adaugă în coș</button>
+            </div>
+            <img src="./images/f8.png" alt="poza burger bacon cheddar">
+            <p class="produs-title">Burger cu bacon și cheddar</p>
+          </div>
+          <div class="produs">
+            <div class="produs-details">
+              <p>Chifla proaspătă, pui grillat suculent, frunze de salată verde, roșii, ceapă caramelizată
+                și sos picant. O alegere sănătoasă și delicioasă pentru iubitorii de burgeri cu carne de pui.
+              </p>
+              <button class="add-to-cart" data-product="Burger cu pui">Adaugă în coș</button>
+            </div>
+            <img src="./images/f11.png" alt="poza cartofi prăjiți">
+            <p class="produs-title">Burger cu pui</p>
+          </div>
+        </div>
+        <div id = "butoanele">
+          <button class = "butoane-add-sterge" onclick="AdaugaProdusNou();">Mai creaza un produs</button>
+          <button class = "butoane-add-sterge" onclick="stergeUltElem();">Sterge ultimul produs</button>
+        </div>
+
+      </section>
+    </div>
+  </main>
+  <footer>
+    <section class="contact">
+      <h2 class="section-title">Cum ne puteți găsi?</h2>
+      <ul class="profile-links">
+        <li>
+          <a href="https://www.facebook.com/" target="_self" class="buton_1_link">Pagina de Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.glovoapp.com/" target="_self" class="buton_2_link">Glovo</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_self" class="buton_3_link">Instagram</a>
+        </li>
+        <li>
+          <a href="mailto:ceva_mail@gmail.com" target="_self" class="buton_4_link">Trimite un email</a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+</body>
+</html>

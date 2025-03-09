@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomandat de</title>
+    <style>
+        .bababa {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .bababa h2 {
+            margin-bottom: 20px;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: nowrap; /* Asigură că divurile nu se împart pe mai multe linii */
+        }
+        .logos img {
+            max-height: 170px;
+        }
+        .celebritati {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .celebritati p {
+            margin-top: 10px; /* Spațiu între imagine și text */
+        }
+        /* Săgețile sunt ascunse pe desktop */
+        .sagetica {
+            display: none;
+        }
+        
+
+        /* Media Query pentru telefoane */
+        @media (max-width: 600px) {
+            .logos {
+                display: flex;
+                justify-content: center; /* Centrarea conținutului */
+                align-items: center;
+                position: relative;
+                overflow: hidden; /* Ascundem overflow-ul */
+                gap: 0; /* Eliminăm gap-ul */
+                width: 100%;
+            }
+            .celebritati {
+                display: none;
+                flex: 0 0 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .celebritati.active {
+                display: flex;
+            }
+            .sagetica {
+                display: flex; /* Afișăm săgețile pe mobile */
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                border-radius: 50%; /* Rotunjirea săgeților */
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px; /* Dimensiunea fontului pentru săgeți */
+                cursor: pointer;
+            }
+            .sagetica.left {
+                left: 10px;
+            }
+            .sagetica.right {
+                right: 10px;
+            }
+            .celebritati img {
+                max-height: 150px; /* Ajustăm dimensiunea imaginilor pentru ecrane mici */
+            }
+            .celebritati p {
+                margin-top: 5px; /* Ajustăm spațiul între imagine și text pe mobil */
+            }
+            .celebritati h2 {
+                margin-bottom: 5px;
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bababa">
+        <h2>Cum le poti folosii</h2>
+        <div class="logos">
+            <!-- Săgețile sunt vizibile doar pe mobile -->
+            <button class="sagetica left" onclick="prevCeleb()">&lt;</button>
+            
+            <div class="celebritati active">
+                <img src="https://cdn.shopify.com/s/files/1/0788/7932/6535/files/1-nas.png?v=1723961852" alt="Curatare Nas">
+                <h2> Pasul 1 </h2>
+                <p> Curata nasul </p>
+            </div>
+            
+            <div class="celebritati">
+                <img src="https://cdn.shopify.com/s/files/1/0788/7932/6535/files/2-nas.png?v=1723961863" alt="Aplica">
+                <h2> Pasul 2 </h2>
+                <p> Aplica plasturele </p>
+            </div>
+
+            <div class="celebritati">
+                <img src="https://cdn.shopify.com/s/files/1/0788/7932/6535/files/3-nas.png?v=1723962331" alt="Lipeste banda">
+                <h2> Pasul 3 </h2>
+                <p> Lipeste banda </p>
+            </div>
+
+            
+
+            <button class="sagetica right" onclick="nextCeleb()">&gt;</button>
+        </div>
+        
+    </div>
+
+    <script>
+        let currentCeleb = 0;
+        const celebs = document.querySelectorAll('.celebritati');
+        const prevButton = document.querySelector('.sagetica.left');
+        const nextButton = document.querySelector('.sagetica.right');
+
+        function updateCelebs() {
+            celebs.forEach((celeb, index) => {
+                celeb.classList.toggle('active', index === currentCeleb);
+            });
+        }
+
+        function prevCeleb() {
+            currentCeleb = (currentCeleb > 0) ? currentCeleb - 1 : celebs.length - 1;
+            updateCelebs();
+        }
+
+        function nextCeleb() {
+            currentCeleb = (currentCeleb < celebs.length - 1) ? currentCeleb + 1 : 0;
+            updateCelebs();
+        }
+
+        updateCelebs();
+    </script>
+</body>
+</html>
